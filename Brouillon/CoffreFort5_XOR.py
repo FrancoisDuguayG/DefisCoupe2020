@@ -1,6 +1,6 @@
 def CoffreFort():
-    motDePasse = input("Entrez votre mot de passe: ")
-    if (verifierMotDePasse(int(motDePasse, 2))):
+    mot_de_passe = input("Entrez votre mot de passe: ")
+    if (verifier_mot_de_passe(int(mot_de_passe, 2))):
         print("Accès autorisé.")
     else:
         print("Accès refusé!")
@@ -13,12 +13,12 @@ def CoffreFort():
     # -Minion # 9567
 
 
-def verifierMotDePasse(motDePasse):
+def verifier_mot_de_passe(mot_de_passe):
     byte = 0b11001010
     # = int('11001010', 2)
-    motDePasseEncrypte = byte ^ motDePasse
+    mot_de_passeEncrypte = byte ^ mot_de_passe
 
-    return motDePasseEncrypte == 0b11111111
+    return mot_de_passeEncrypte == 0b11111111
 
 # 00110101
 

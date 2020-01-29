@@ -1,7 +1,7 @@
 
 def CoffreFort():
-    motDePasse = input("Entrez votre mot de passe: ")
-    if verifierMotDePasse(motDePasse):
+    mot_de_passe = input("Entrez votre mot de passe: ")
+    if verifier_mot_de_passe(mot_de_passe):
         print("Accès autorisé.")
     else:
         print("Accès refusé!")
@@ -12,10 +12,10 @@ def CoffreFort():
     ## Même si ça ressemble beaucoup à l'addition de lettre
 
 
-def verifierMotDePasse(motDePasse):
+def verifier_mot_de_passe(mot_de_passe):
     trois = 3
     quatre = "4"
-    return motDePasse == str(trois * 4) + quatre * 3
+    return mot_de_passe == str(trois * 4) + quatre * 3
 
 
 if __name__ == '__main__':

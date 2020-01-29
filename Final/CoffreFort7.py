@@ -1,7 +1,7 @@
 
 def CoffreFort():
-    motDePasse = input("Entrez votre mot de passe: ")
-    if verifierMotDePasse(motDePasse):
+    mot_de_passe = input("Entrez votre mot de passe: ")
+    if verifier_mot_de_passe(mot_de_passe):
         print("Accès autorisé.")
     else:
         print("Accès refusé!")
@@ -11,16 +11,16 @@ def CoffreFort():
     ## Le mot de passe est trop bien cacher!
     ## Pouf!
 
-def verifierMotDePasse(motDePasse):
+def verifier_mot_de_passe(mot_de_passe):
     a = "CaD"
-    b = "abr4"
+    b = "4bra"
     c = "C0C0"
-    d = "sda"
+    d = "s3v"
     d = b
     c = a
     a = d
     d = b
-    return motDePasse == a + c + a
+    return mot_de_passe == a + c + a
 
 
 if __name__ == '__main__':

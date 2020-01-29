@@ -1,9 +1,11 @@
 import baseconvert
+import threading
+from time import sleep
 
 def CoffreFort():
 
-    motDePasse = input("Entrez votre mot de passe: ")
-    if (verifierMotDePasse(motDePasse)):
+    mot_de_passe = input("Entrez votre mot de passe: ")
+    if (verifier_mot_de_passe(mot_de_passe)):
         print("Accès autorisé.")
     else:
         print("Accès refusé!")
@@ -15,11 +17,18 @@ def CoffreFort():
     #
     # -Minion # 9567
 
-def verifierMotDePasse(motDePasse):
+def verifier_mot_de_passe(mot_de_passe):
     #
-    motDePasseEncrypte = baseconvert.base(motDePasse, 10, 2, string=True)
-    return motDePasseEncrypte == '10101'
+    mot_de_passeEncrypte = baseconvert.base(mot_de_passe, 10, 2, string=True)
+    return mot_de_passeEncrypte == '10101'
 
+def hello():
+    print("hello?")
 
 if __name__ == '__main__':
+    t = threading.Timer(10, hello)
+    t.start()
+    #t.change(2)
+    sleep(5)
+    print(t.getName())
     CoffreFort()

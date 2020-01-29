@@ -2,8 +2,8 @@ import baseconvert
 
 def CoffreFort():
 
-    motDePasse = input("Entrez votre mot de passe: ")
-    if (verifierMotDePasse(motDePasse.upper())):
+    mot_de_passe = input("Entrez votre mot de passe: ")
+    if (verifier_mot_de_passe(mot_de_passe.upper())):
         print("Accès autorisé.")
     else:
         print("Accès refusé!")
@@ -15,9 +15,9 @@ def CoffreFort():
     #
     # -Minion # 9567
 
-def verifierMotDePasse(motDePasse):
-    motDePasseEncrypte = baseconvert.base(motDePasse, 16, 10, string=True)
-    return motDePasseEncrypte == "42"
+def verifier_mot_de_passe(mot_de_passe):
+    mot_de_passeEncrypte = baseconvert.base(mot_de_passe, 16, 10, string=True)
+    return mot_de_passeEncrypte == "42"
 
 
 if __name__ == '__main__':
