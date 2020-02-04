@@ -2,10 +2,10 @@
 def CoffreFort():
     mot_de_passe = 0
     try:
-        mot_de_passe = int(input("Entrez votre mot de passe: "))
+        mot_de_passe = input("Entrez votre mot de passe: ")
     except ValueError:
         print("ERREUR!#?!")
-    if verifier_mot_de_passe(int(mot_de_passe)):
+    if verifier_mot_de_passe(mot_de_passe):
         print("Accès autorisé.")
     else:
         print("Accès refusé!")
@@ -17,15 +17,16 @@ def CoffreFort():
 
 
 def verifier_mot_de_passe(mot_de_passe):
-    liste_de_chiffres = [31, 25, 19, 13, 7, 1]
+    if len(mot_de_passe) != 14:
+        return False
 
-    crypto_mp = 0
+    crypto_mp = ""
 
-    for chiffre in liste_de_chiffres:
-        crypto_mp += liste_de_chiffres[chiffre % 5]
+    for position in range(1, 15):
+        crypto_mp = crypto_mp + mot_de_passe[-position]
 
     print(crypto_mp)
-    return mot_de_passe == crypto_mp
+    return crypto_mp == "!3pu0c_4l_3v1v"
 
 
 if __name__ == '__main__':
