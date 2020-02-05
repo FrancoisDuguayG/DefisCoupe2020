@@ -1,0 +1,5 @@
+python3.8
+package jupyter
+
+dans un invite de commande, pour démarer le serveur jupyter:
+$jupyter notebook
